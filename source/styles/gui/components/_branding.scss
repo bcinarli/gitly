@@ -1,0 +1,28 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+ 
+    ------------------------------------------- **/
+.branding {
+    color: $color-text;
+    text-decoration: none;
+
+    &-name {
+        display: inline-block;
+        margin: 0 10px;
+        @include font-size(24px);
+        font-weight: bold;
+        vertical-align: middle;
+    }
+
+    &-info {
+        @include font-size(14px);
+        font-style: italic;
+        vertical-align: bottom;
+    }
+
+    .page-header & {
+        @include center-vertical;
+        left: 0;
+    }
+}

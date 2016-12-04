@@ -1,0 +1,23 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+ 
+    ------------------------------------------- **/
+.landing {
+    @include center;
+    text-align: center;
+
+    &-branding {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    &-subtitle {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
+    .item {
+        width: 100%;
+    }
+}

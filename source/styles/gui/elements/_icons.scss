@@ -1,0 +1,154 @@
+
+%icon-branch {
+    content: "\EA01";
+}
+
+.icon-branch {
+    &::before {
+        @extend %icon-branch
+    }
+}
+
+
+%icon-cross {
+    content: "\EA02";
+}
+
+.icon-cross {
+    &::before {
+        @extend %icon-cross
+    }
+}
+
+
+%icon-eye {
+    content: "\EA03";
+}
+
+.icon-eye {
+    &::before {
+        @extend %icon-eye
+    }
+}
+
+
+%icon-github {
+    content: "\EA04";
+}
+
+.icon-github {
+    &::before {
+        @extend %icon-github
+    }
+}
+
+
+%icon-link-external {
+    content: "\EA05";
+}
+
+.icon-link-external {
+    &::before {
+        @extend %icon-link-external
+    }
+}
+
+
+%icon-octocat {
+    content: "\EA06";
+}
+
+.icon-octocat {
+    &::before {
+        @extend %icon-octocat
+    }
+}
+
+
+%icon-person {
+    content: "\EA07";
+}
+
+.icon-person {
+    &::before {
+        @extend %icon-person
+    }
+}
+
+
+%icon-repo-forked {
+    content: "\EA08";
+}
+
+.icon-repo-forked {
+    &::before {
+        @extend %icon-repo-forked
+    }
+}
+
+
+%icon-search {
+    content: "\EA09";
+}
+
+.icon-search {
+    &::before {
+        @extend %icon-search
+    }
+}
+
+
+%icon-star {
+    content: "\EA0A";
+}
+
+.icon-star {
+    &::before {
+        @extend %icon-star
+    }
+}
+
+
+%icon-clock {
+    content: "\EA0B";
+}
+
+.icon-clock {
+    &::before {
+        @extend %icon-clock
+    }
+}
+
+
+%icon-location {
+    content: "\EA0C";
+}
+
+.icon-location {
+    &::before {
+        @extend %icon-location
+    }
+}
+
+
+%icon-info {
+    content: "\EA0D";
+}
+
+.icon-info {
+    &::before {
+        @extend %icon-info
+    }
+}
+
+
+%icon-warning {
+    content: "\EA0E";
+}
+
+.icon-warning {
+    &::before {
+        @extend %icon-warning
+    }
+}
+

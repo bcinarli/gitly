@@ -1,0 +1,28 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+ 
+    ------------------------------------------- **/
+.search-form {
+    .page-header & {
+        @include center-vertical;
+        right: 0;
+
+        input {
+            min-width: 250px;
+        }
+    }
+
+    .item {
+        position: relative;
+    }
+
+    input {
+        padding-right: 30px;
+    }
+
+    i {
+        @include center-vertical;
+        right: $base-gutter/2;
+    }
+}
