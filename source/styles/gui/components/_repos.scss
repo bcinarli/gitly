@@ -25,6 +25,11 @@
     border: 1px solid $color-light-gray;
     border-radius: 5px;
 
+    @media screen and (max-width: 26.875em) {
+        width: 100%;
+        padding-bottom: $base-gutter/2;
+    }
+
     &-name {
         i {
             margin-left: 5px;
@@ -38,8 +43,10 @@
     }
 
     &-meta {
-        position: absolute;
-        bottom: $base-gutter/2;
-        left: $base-gutter/2;
+        @media screen and (min-width: 26.876em) {
+            position: absolute;
+            bottom: $base-gutter/2;
+            left: $base-gutter/2;
+        }
     }
 }

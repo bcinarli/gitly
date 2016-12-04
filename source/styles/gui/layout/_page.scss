@@ -13,6 +13,11 @@
     max-width: 980px;
     min-height: 100%;
     margin: 0 auto;
+
+    @media screen and (max-width: 60em) {
+        padding-right: $base-gutter;
+        padding-left: $base-gutter;
+    }
 }
 
 .gitly-app {

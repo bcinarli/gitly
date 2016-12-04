@@ -22,7 +22,13 @@
     }
 
     .page-header & {
-        @include center-vertical;
-        left: 0;
+        @media screen and (min-width: 48em) {
+            @include center-vertical;
+            left: $base-gutter;
+        }
+
+        @media screen and (min-width: 60em) {
+            left: 0;
+        }
     }
 }

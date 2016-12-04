@@ -5,8 +5,14 @@
     ------------------------------------------- **/
 .search-form {
     .page-header & {
-        @include center-vertical;
-        right: 0;
+        @media screen and (min-width: 48em) {
+            @include center-vertical;
+            right: $base-gutter;
+        }
+
+        @media screen and (min-width: 60em) {
+            right: 0;
+        }
 
         input {
             min-width: 250px;
