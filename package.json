@@ -4,7 +4,7 @@
   "description": "Github Repo Lister",
   "main": "app/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/helper.js test/**/*_spec.js"
   },
   "keywords": [
     "Chart",
@@ -19,7 +19,9 @@
     "babel-preset-stage-0": "^6.5.0",
     "babelify": "^7.3.0",
     "browserify": "^13.1.0",
+    "chai": "^3.5.0",
     "classnames": "^2.2.5",
+    "enzyme": "^2.6.0",
     "gulp": "latest",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
@@ -38,8 +40,11 @@
     "gulp-sourcemaps": "latest",
     "gulp-uglify": "latest",
     "gulp-util": "latest",
+    "jsdom": "^9.8.3",
     "load-gulp-tasks": "latest",
     "lodash": "latest",
+    "mocha": "^3.2.0",
+    "react-addons-test-utils": "^15.4.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
