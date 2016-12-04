@@ -1,5 +1,0 @@
-bower_components/**
-node_modules/**
-app/assets/scripts/**
-rocket-engine/tasks/**
-app/assets/scripts/segmentify-dashboard.lib.js
