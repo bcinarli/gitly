@@ -52,7 +52,7 @@ class User extends React.Component {
                 });
 
                 if(response.details.status === 404) {
-                    notifications.userNotFound();
+                    notifications.userNotFound(user);
                 }
 
                 else {
