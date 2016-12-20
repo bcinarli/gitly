@@ -11,15 +11,17 @@ import ui from '../../modules/ui';
 import {getUserRepos} from '../../modules/user';
 import notifications from '../../modules/notifications';
 
-import Meta from '../meta';
 import Notification from '../notification';
+import Repo from './repo';
 
 class UserRepos extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            repos: []
+            repos: [],
+            ownRepos: [],
+            forkedRepos: []
         };
     }
 
@@ -39,7 +41,9 @@ class UserRepos extends React.Component {
         getUserRepos(username, (response) => {
             if(response.status === 'success') {
                 this.setState({
-                    repos: response.details
+                    repos: response.details,
+                    ownRepos: response.details.filter(item => { return !item.fork}),
+                    forkedRepos: response.details.filter(item => { return item.fork}),
                 });
             }
 
@@ -61,30 +65,17 @@ class UserRepos extends React.Component {
                         <h3 className="user-repo-list-title">User Repos</h3>
                         <ol className="user-repos">
                             {
-                                this.state.repos.map((repo) => {
-                                    return (
-                                        <li key={repo.id} className="user-repo">
-                                            <a href={repo.html_url} className="user-repo-name" target="_blank">
-                                                {repo.name}
-                                                <i className="icon-link-external" />
-                                            </a>
+                                this.state.ownRepos.map((repo) => {
+                                    return <Repo key={repo.id} {...repo} />
+                                })
+                            }
+                        </ol>
 
-                                            <div className="user-repo-description">
-                                                <p>{repo.description}</p>
-                                            </div>
-
-                                            <div className="user-repo-meta">
-                                                {
-                                                    repo.language !== null
-                                                        ? <Meta value={repo.language} />
-                                                        : ''
-                                                }
-                                                <Meta icon="repo-forked" title="Forks" value={repo.forks_count} />
-                                                <Meta icon="star" title="Star" value={repo.stargazers_count} />
-                                                <Meta icon="eye" title="Watchers" value={repo.watchers_count} />
-                                            </div>
-                                        </li>
-                                    )
+                        <h3 className="user-repo-list-title">Forked Repos Repos</h3>
+                        <ol className="user-repos">
+                            {
+                                this.state.forkedRepos.map((repo) => {
+                                    return <Repo key={repo.id} {...repo} />
                                 })
                             }
                         </ol>
