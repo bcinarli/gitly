@@ -2514,9 +2514,12 @@ dl dt {
     Content
     ------------------------------------------- **/
 .page-main {
-  margin-top: 125px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.page-header ~ .page-main {
+  margin-top: 125px;
 }
 
 /**
